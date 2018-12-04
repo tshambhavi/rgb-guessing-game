@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  background-color: #232323;
+  font-family: "Montserrat";
+}
+h1 {
+  margin: 0;
+  padding: 40px 0;
+  background: #3275ac;
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.pickedColorDisplay {
+  font-size: 200%;
+  font-weight: normal;
+}
+.container {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 1rem;
+  margin: 2rem auto;
+}
+.square {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #800080;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+}
+.square::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.stripe {
+  height: 30px;
+  text-align: center;
+  color: #000;
+  background: #fff;
+}
+button {
+  height: 100%;
+  font-family: Montserrat;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3275ac;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+button:hover {
+  background: #3275ac;
+  color: #fff;
+}
+.feedback {
+  display: inline-block;
+  width: 20%;
+}
+.easy {
+  margin-right: 0.275em;
+}
+.selected {
+  background: #3275ac;
+  color: #fff;
+}
+
+@media (max-width: 719px) {
+  .container {
+    max-width: 580px;
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+@media (max-width: 627px) {
+  h1 {
+    font-size: 1.5em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  stripe {
+    height: 44px;
+  }
+  button,
+  .feedback {
+    font-size: 0.8em;
+  }
+  .container {
+    max-width: 480px;
+  }
+}
+@media (max-width: 527px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  .container {
+    max-width: 400px;
+  }
+}
+@media (max-width: 447px) {
+  .container {
+    max-width: 320px;
+  }
+}
+@media (max-width: 367px) {
+  h1 {
+    font-size: 1em;
+  }
+  button {
+    font-size: 0.75em;
+  }
+  .feedback {
+    font-size: 0.7em;
+  }
+  .container {
+    max-width: 272px;
+  }
+}
